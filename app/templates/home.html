@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+HomePage
+{% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <h1 class="text-center">Welcome</h1>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col">
+            <img src="{{ url_for('static', filename='python.png') }}" style="width: 330px; height: 330px;" alt="#">
+            <p style="font-size: x-large;">Python for back end </p>
+        </div>
+        <div class="col">
+            <img src="{{ url_for('static', filename='tf.png') }}" style="width: 330px; height: 330px;" alt="#">
+            <p style="font-size: x-large;">Tensorflow for deeplearning and AI</p>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <img src="{{ url_for('static', filename='js.png') }}" style="width: 330px; height: 330px;" alt="#">
+            <p style="font-size: x-large;">JavaScript for front end </p>
+        </div>
+        <div class="col">
+            <img src="{{ url_for('static', filename='logo.png') }}" style="width: 330px; height: 330px;" alt="#">
+            <p style="font-size: x-large;">I have made a blog</p>
+        </div>
+    </div>
+</body>
+<style>
+    .col:hover {
+        opacity: 50%;
+    }
+</style>
+{% endblock %}

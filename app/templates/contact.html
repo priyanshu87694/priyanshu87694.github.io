@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}
+Contact Page
+{% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <br>
+    <br>
+    <div class="row">
+        <div class="col">
+            <h3>Email</h3>
+        </div>
+        <div class="col">
+            <h4>priyanshu876954@gmail.com</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Phone</h3>
+        </div>
+        <div class="col">
+            <h4>9664375335</h4>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <br>
+            <!-- <img class="mb-4" src="https://res.cloudinary.com/jimshapedcoding/image/upload/v1597332609/android-icon-192x192_ove2a7.png" alt=""> -->
+            <h1 class="h3 mb-3 font-weight-normal">
+                Send me a message
+            </h1>
+            <br>
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Enter your name") }}
+
+            {{ form.email.label() }}
+            {{ form.email(class="form-control", placeholder="Enter you email") }}
+
+            {{ form.text.label() }}
+            {{ form.text(class="form-control", placeholder="Enter your message") }}
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+<br>
+<br>
+
+{% endblock %}
